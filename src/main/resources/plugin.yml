@@ -1,0 +1,7 @@
+name: CustomFish
+version: '1.0'
+main: top.pmckk.customfish.Customfish
+api-version: '1.21'
+author: PMCKK
+description: 一个简单的自定义钓鱼插件
+command:

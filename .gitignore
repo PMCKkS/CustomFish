@@ -1,0 +1,15 @@
+.gradle/
+build/
+gradle/
+gradlew
+gradlew.bat
+.idea/
+*.iml
+*.ipr
+*.iws
+run/
+logs/
+plugins/
+*.tmp
+*.bak
+.DS_Store
