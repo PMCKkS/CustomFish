@@ -1,7 +1,40 @@
 name: CustomFish
 version: '1.0'
-main: top.pmckk.customfish.Customfish
+main: top.pmckk.customfish.Customfishing
 api-version: '1.21'
 author: PMCKK
-description: 一个简单的自定义钓鱼插件
-command:
+description: 一款高度自定义钓鱼的插件
+softdepend:
+  - Vault
+  - PlaceholderAPI
+commands:
+  customfishing:
+    usage: /customfishing [help|list|reload|gui|game|shop]
+    description: CustomFish 插件主命令
+    aliases: [cf]
+    permission: customfishing.command
+    permission-message: §c你没有权限使用此命令！
+permissions:
+  customfishing.command:
+    description: 允许使用 CustomFish 基础命令
+    default: true
+  customfishing.admin:
+    description: CustomFish 管理员权限
+    default: op
+    children:
+      customfishing.reload: true
+      customfishing.list: true
+      customfishing.gui.edit: true
+      customfishing.game: true
+  customfishing.reload:
+    description: 允许重载配置文件
+    default: op
+  customfishing.list:
+    description: 允许查看奖励池列表
+    default: op
+  customfishing.gui.edit:
+    description: 允许使用编辑GUI
+    default: op
+  customfishing.game:
+    description: 允许管理钓鱼小游戏
+    default: op

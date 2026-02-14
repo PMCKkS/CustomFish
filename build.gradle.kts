@@ -12,18 +12,23 @@ repositories {
     maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots/") {
         name = "spigotmc-repo"
     }
+    maven("https://jitpack.io"){
+        name = "jitpack"
+    }
+    maven("https://repo.extendedclip.com/releases/") {
+        name = "placeholder"
+    }
 }
 
 dependencies {
     compileOnly("org.spigotmc:spigot-api:1.21.1-R0.1-SNAPSHOT")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    compileOnly("com.github.MilkBowl:VaultAPI:1.7")
+    compileOnly("me.clip:placeholderapi:2.12.2")
 }
 
 tasks {
     runServer {
-        // Configure the Minecraft version for our task.
-        // This is the only required configuration besides applying the plugin.
-        // Your plugin's jar (or shadowJar if present) will be used automatically.
         minecraftVersion("1.21")
     }
 }

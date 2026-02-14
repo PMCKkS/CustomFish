@@ -1,1 +1,12 @@
-1111111
+#调试模式
+debug:
+  enable: false
+
+prefix:
+  - "§f[§b钓鱼播报§f]"
+
+message:
+  - "恭喜%player_name%钓到了%fish_reward%！"
+  - "钓鱼比赛%fishing_game_name%已开启!请各位查看菜单!"
+  - "钓鱼比赛%fishing_game_name%已结束!请各位查看菜单领取奖励!"
+  - "奖池%reward_pool_name%已开启!"

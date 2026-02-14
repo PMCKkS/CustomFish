@@ -14,7 +14,10 @@ object ConfigManager {
         private set
     lateinit var rewardpoolConfig : YamlConfiguration
         private set
-
+    lateinit var shopConfig : YamlConfiguration
+        private set
+    lateinit var gameConfig : YamlConfiguration
+        private set
     fun init(pluginInstance: JavaPlugin){
         plugin = pluginInstance
         //检查配置是否存在
@@ -24,6 +27,8 @@ object ConfigManager {
         //加载配置文件
         mainConfig = loadCustomConfig("config.yml")
         rewardpoolConfig = loadCustomConfig("rewardpool.yml")
+        shopConfig = loadCustomConfig("shop.yml")
+        gameConfig = loadCustomConfig("game.yml")
     }
     //加载配置
     private fun loadCustomConfig(fileName: String): YamlConfiguration{
@@ -48,6 +53,8 @@ object ConfigManager {
         when (fileName.lowercase()){
             "config.yml" -> mainConfig = loadCustomConfig(fileName)
             "rewardpool.yml" -> rewardpoolConfig = loadCustomConfig(fileName)
+            "game.yml" -> gameConfig = loadCustomConfig(fileName)
+            "shop.yml" -> shopConfig = loadCustomConfig(fileName)
             else -> plugin.logger.warning("重载 $fileName 失败,请查看格式是否正确.")
         }
         plugin.logger.info("重载配置 $fileName 成功.")

@@ -1,0 +1,67 @@
+#小游戏的配置
+Game_1:
+  #是否开启
+  enable: false
+  #游戏的名称
+  name: "示例小游戏1"
+  #开始的日期
+  Start_data: 2026-02-14
+  #结束的日期
+  end_data: 2026-03-14
+  #是否开启离线奖励发送至奖励界面
+  offLine: false
+  #是否开启游戏开始/结束播报
+  broadcast: false
+  #任务的条件
+  condition:
+    #多种条件如果你想要有季军亚军就写多条
+    con_1:
+      item: DIAMOND
+      #目标数量
+      count: 60
+      #冠军
+      name: "冠军"
+      broadcast:
+        - '恭喜%player_name%获得了%fishing_game_name%的冠军!太吊了!'
+    con_2:
+      item: DIAMOND
+      #目标数量
+      count: 40
+      #冠军
+      name: "亚军"
+      broadcast:
+        - '恭喜%player_name%获得了%fishing_game_name%的亚军!还需努力!'
+    con_3:
+      item: DIAMOND
+      #目标数量
+      count: 60
+      #冠军
+      name: "季军"
+      broadcast:
+        - '恭喜%player_name%获得了%fishing_game_name%的冠军!再接再厉!'
+Game_2:
+  enable: false
+  name: "示例小游戏2"
+  Start_data: []
+  end_data: 2026-03-14
+  offLine: false
+  broadcast: false
+  condition:
+    con_1:
+      item: DIAMOND
+      count:
+      name: ""
+      broadcast:
+        - ''
+    con_2:
+      item: DIAMOND
+      count: []
+      name: ""
+      broadcast:
+        - ''
+    con_3:
+      item:
+      count:
+      name: ""
+      broadcast:
+        - ''

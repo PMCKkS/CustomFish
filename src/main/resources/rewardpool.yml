@@ -1,1 +1,37 @@
-111111111
+#钓鱼奖池配置文件
+
+example_pool:
+  #奖池名称
+  name: "示例奖池"
+  #是否开启可以通过指令开启也可以在这里开启
+  enable: false
+  #奖池开启播报
+  broadcast: false
+  #奖池列表
+  reward_list:
+    #奖励物品1
+    item1:
+      #概率0.01-1
+      chance: 0.01
+      #钓上的物品名称
+      name: "钻石"
+      #物品的介绍
+      lore:
+        - '一颗闪闪发光的钻石'
+      #物品的材质,实际钓鱼上来的东西基于你材质填写的物品
+      materials: DIAMOND
+      #是否开启播报,比如高级战利品会全服播报
+      broadcast: false
+      #额外执行的命令
+      command:
+        - 'money give %player_name% 1000'
+    item2:
+      chance: 0.2
+      name: "铁锭"
+      lore:
+        - '一种非常有用矿物冶炼后的产物'
+        - '非常适合制作工具'
+      materials: IRON_INGOT
+      broadcast: false
+      command:
+        - ''
